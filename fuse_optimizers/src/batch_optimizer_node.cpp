@@ -33,14 +33,13 @@
  */
 #include <fuse_graphs/hash_graph.hpp>
 #include <fuse_optimizers/batch_optimizer.h>
-#include <ros/ros.h>
 
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "batch_optimizer_node");
-  fuse_optimizers::BatchOptimizer optimizer(fuse_graphs::HashGraph::make_unique());
-  ros::spin();
-
+  rclcpp::init(argc, argv);
+  rclcpp::NodeOptions options;
+  rclcpp::spin(std::make_shared<fuse_optimizers::BatchOptimizer>(options));
+  rclcpp::shutdown();
   return 0;
 }

@@ -37,7 +37,7 @@
 #include <fuse_core/graph.hpp>
 #include <fuse_core/transaction.hpp>
 #include <fuse_variables/point_2d_landmark.hpp>
-#include <pluginlib/class_list_macros.h>
+#include <pluginlib/class_list_macros.hpp>
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <sensor_msgs/point_cloud2_iterator.h>
